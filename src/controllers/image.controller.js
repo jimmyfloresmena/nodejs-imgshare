@@ -7,7 +7,7 @@ import { randomNumber } from "../helpers/libs";
 import { Image, Comment } from "../models";
 
 export const index = async (req, res, next) => {
-  let viewModel = { image: {}, comments: [] };
+  let viewModel = { image: {}, comments: [], };
 
   const image = await Image.findOne({
     filename: { $regex: req.params.image_id },
